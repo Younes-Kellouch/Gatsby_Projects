@@ -6,9 +6,6 @@ import logo from "../assets/images/logo.svg"
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false)
 
-  const buttonClickHandler = () => {
-    setShowLinks(!showLinks)
-  }
   return (
     <nav className="navBar">
       <div className="nav-center">
@@ -16,30 +13,49 @@ const Navbar = () => {
           <Link to="/">
             <img src={logo} alt="simply recipes" />
           </Link>
-          <button className="nav-btn" onClick={buttonClickHandler}>
+          <button className="nav-btn" onClick={() => setShowLinks(!showLinks)}>
             <FiMenu />
           </button>
         </div>
         <div className={showLinks ? "nav-links show-links" : "nav-links"}>
-          <Link to="/" className="nav-link" activeClassName="active-link">
+          <Link
+            to="/"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShowLinks(false)}
+          >
             home
           </Link>
           <Link
             to="/recipes"
             className="nav-link"
             activeClassName="active-link"
+            onClick={() => setShowLinks(false)}
           >
             recipes
           </Link>
-          <Link to="/tags" className="nav-link" activeClassName="active-link">
+          <Link
+            to="/tags"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShowLinks(false)}
+          >
             tags
           </Link>
-          <Link to="/about" className="nav-link" activeClassName="active-link">
+          <Link
+            to="/about"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShowLinks(false)}
+          >
             about
           </Link>
           <div className="nav-link contact-link">
-            <Link to="/contact" className="btn">
-              {" "}
+            <Link
+              to="/contact"
+              className="btn"
+              onClick={() => setShowLinks(false)}
+            >
               contact
             </Link>
           </div>
