@@ -7,7 +7,7 @@ const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false)
 
   return (
-    <nav className="navBar">
+    <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
