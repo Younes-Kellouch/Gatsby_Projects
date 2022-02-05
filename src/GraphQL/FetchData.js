@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const getData = graphql`
   {
     site {
-      siteMetadata {
+      info:siteMetadata {
         author
         description
         simpleData
@@ -22,15 +22,15 @@ const FetchData = () => {
   const data = useStaticQuery(getData)
   const {
     site: {
-      siteMetadata: { title },
+      info: { title },
     },
   } = data
   return (
     <div>
-      <h2>{data.site.siteMetadata.author}</h2>
+      <h2>{data.site.info.author}</h2>
       <h3>{title}</h3>
       <div>
-        {data.site.siteMetadata.complexData.map((item, index) => (
+        {data.site.info.complexData.map((item, index) => (
           <p key={index}>
             {item.name} : {item.age}
           </p>
