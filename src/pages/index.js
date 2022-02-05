@@ -1,7 +1,7 @@
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import Layout from "../components/Layouts"
+import FetchData from "../GraphQL/FetchData"
 
 export default function Home() {
   return (
@@ -23,6 +23,7 @@ export default function Home() {
           </div>
         </header>
       </main>
+      <FetchData/>
     </Layout>
   )
 }
