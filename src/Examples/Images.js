@@ -14,6 +14,7 @@ const Images = () => {
           layout="constrained"
           className="example-image"
           as="section"
+          width={600}
         />
       </article>
       <article>
@@ -23,6 +24,17 @@ const Images = () => {
           alt="food"
           placeholder="blurred"
           layout="fixed"
+          className="example-image"
+          width={400}
+        />
+      </article>
+      <article>
+        <h4>Full Width</h4>
+        <StaticImage
+          src="../assets/images/big.jpg"
+          alt="food"
+          placeholder="dominantColor"
+          layout="fullWidth"
           className="example-image"
           width={400}
         />
