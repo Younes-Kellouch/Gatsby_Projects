@@ -10,18 +10,17 @@ const setUpTags = (recipes = []) => {
   })
   console.log("array : " ,Object.entries(allTags))
   const newTags = Object.entries(allTags).sort((a,b)=>{
-      console.log("A :" +a )
-      console.log("B :" +b )
+     // console.log("A :" +a )
+     // console.log("B :" +b )
       const [firstTag] = a
-      console.log("firstTag :" +firstTag )
+     // console.log("firstTag :" +firstTag )
       const [secondTag] = b
-      console.log("secondTag :" +secondTag )
+     // console.log("secondTag :" +secondTag )
 
       return firstTag.localeCompare(secondTag)
   })
 
-  console.log(newTags)
-  return recipes
+  return newTags
 }
 
 export default setUpTags
