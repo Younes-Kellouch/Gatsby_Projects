@@ -1,5 +1,6 @@
 const setUpTags = (recipes = []) => {
   console.log("setUpTags")
+  console.log(recipes)
   const allTags = {}
 
   recipes.forEach(recipe => {
