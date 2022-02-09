@@ -41,5 +41,6 @@ module.exports = {
         accessToken: process.env.CONTENFUL_API_KEY,
       },
     },
+    `gatsby-plugin-react-helmet`,
   ],
 }
