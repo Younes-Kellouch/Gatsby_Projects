@@ -2,6 +2,7 @@ import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/Layouts"
 import RecipesList from "../components/recipes/RecipesList"
+import SEO from "../components/SEO"
 
 const Contact = ({
   data: {
@@ -10,6 +11,7 @@ const Contact = ({
 }) => {
   return (
     <Layout>
+      <SEO title="Contact page" />
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">
@@ -46,7 +48,7 @@ const Contact = ({
         </section>
         <section className="featured-recipes">
           <h5>Look at this Awesome souce!</h5>
-          <RecipesList recipes={recipes}/>
+          <RecipesList recipes={recipes} />
         </section>
       </main>
     </Layout>

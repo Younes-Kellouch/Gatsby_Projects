@@ -4,6 +4,7 @@ import React from "react"
 import Layouts from "../components/Layouts"
 import { BsClockHistory, BsClock, BsPeople } from "react-icons/bs"
 import slugify from "slugify"
+import SEO from "../components/SEO"
 
 const RecipeTemplate = ({ data }) => {
   const {
@@ -19,6 +20,8 @@ const RecipeTemplate = ({ data }) => {
   const { ingredients, instructions, tags, tools } = content
   return (
     <Layouts>
+      <SEO title={title} />
+
       <main className="page">
         <div className="recipe-page">
           {/*hero */}

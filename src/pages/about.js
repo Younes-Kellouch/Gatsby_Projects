@@ -3,11 +3,13 @@ import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import Layout from "../components/Layouts"
 import RecipesList from "../components/recipes/RecipesList"
+import SEO from "../components/SEO"
 
 const About = ({ data:{allContentfulRecipe:{nodes:recipes}} }) => {
   console.log(recipes)
   return (
     <Layout>
+      <SEO title="About US" description="this is about page"/>
       <main className="page">
         <section className="about-page">
           <article>
