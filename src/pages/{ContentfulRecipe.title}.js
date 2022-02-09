@@ -3,9 +3,9 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import React from "react"
 import Layouts from "../components/Layouts"
 import { BsClockHistory, BsClock, BsPeople } from "react-icons/bs"
+import slugify from "slugify"
 
-const RecipeTemplate = props => {
-  console.log(props)
+const RecipeTemplate = ({ data }) => {
   const {
     title,
     cookTime,
@@ -14,7 +14,7 @@ const RecipeTemplate = props => {
     prepTime,
     servings,
     image,
-  } = props.data.contentfulRecipe
+  } = data.contentfulRecipe
   const pathToImage = getImage(image)
   const { ingredients, instructions, tags, tools } = content
   return (
@@ -54,8 +54,10 @@ const RecipeTemplate = props => {
               <p className="recipe-tags">
                 Tags:
                 {tags.map((tag, index) => {
+                  const tagSlug = slugify(tag, { lower: true })
+
                   return (
-                    <Link to={`/`} key={index}>
+                    <Link to={`/tags/${tagSlug}`} key={index}>
                       {tag}
                     </Link>
                   )
